@@ -1,38 +1,66 @@
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #001df5 #0ad121;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #001df5;
+  border-radius: 10px;
+  border: 3px outset #ffffff;
+}
 .App {
+  background-color: #0093e9;
+  background-image: linear-gradient(
+    45deg,
+    #0093e9 0%,
+    #80d0c7 68%,
+    #ffffff 100%
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-height: 400px;
+  background-color: initial;
+  border: 1px solid grey;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+.col-3 {
+  vertical-align: middle;
+}
+h1 {
+  margin-top: 130px;
+}
+.img-div {
+  width: 300px;
+  height: 300px;
+}
+.card-area {
+  max-height: 400px;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.trial {
+  text-align: center;
+}
+#Card {
+  min-width: 250px;
+  word-break: break-all;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  background-color: blue;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: 1px solid rgb(19, 128, 218);
+  border-radius: 10px;
 }
